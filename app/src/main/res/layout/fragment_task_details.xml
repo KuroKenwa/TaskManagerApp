@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/taskTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textAppearance="?attr/textAppearanceHeadline5"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="כותרת המשימה" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/taskPriority"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/taskTitle"
+                tools:text="דחיפות גבוהה" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/taskStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                app:layout_constraintStart_toEndOf="@id/taskPriority"
+                app:layout_constraintTop_toTopOf="@id/taskPriority"
+                tools:text="בביצוע" />
+
+            <TextView
+                android:id="@+id/taskDueDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:textAppearance="?attr/textAppearanceBody1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/taskPriority"
+                tools:text="תאריך יעד: 01/01/2024" />
+
+            <TextView
+                android:id="@+id/taskDescription"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:textAppearance="?attr/textAppearanceBody1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/taskDueDate"
+                tools:text="תיאור המשימה" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/editTaskFab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp"
+        android:contentDescription="@string/edit"
+        android:src="@drawable/ic_edit" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_sort"
+        android:icon="@drawable/ic_sort"
+        android:title="@string/action_sort"
+        app:showAsAction="ifRoom">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/sort_date"
+                    android:checked="true"
+                    android:title="@string/sort_by_date" />
+                <item
+                    android:id="@+id/sort_priority"
+                    android:title="@string/sort_by_priority" />
+                <item
+                    android:id="@+id/sort_status"
+                    android:title="@string/sort_by_status" />
+            </group>
+        </menu>
+    </item>
+
+    <item
+        android:id="@+id/action_filter"
+        android:icon="@drawable/ic_filter"
+        android:title="@string/action_filter"
+        app:showAsAction="ifRoom">
+        <menu>
+            <item
+                android:id="@+id/filter_status"
+                android:title="@string/filter_by_status">
+                <menu>
+                    <group android:checkableBehavior="all">
+                        <item
+                            android:id="@+id/status_pending"
+                            android:checked="true"
+                            android:title="@string/status_pending" />
+                        <item
+                            android:id="@+id/status_in_progress"
+                            android:checked="true"
+                            android:title="@string/status_in_progress" />
+                        <item
+                            android:id="@+id/status_completed"
+                            android:checked="true"
+                            android:title="@string/status_completed" />
+                    </group>
+                </menu>
+            </item>
+            <item
+                android:id="@+id/filter_priority"
+                android:title="@string/filter_by_priority">
+                <menu>
+                    <group android:checkableBehavior="all">
+                        <item
+                            android:id="@+id/priority_high"
+                            android:checked="true"
+                            android:title="@string/priority_high" />
+                        <item
+                            android:id="@+id/priority_medium"
+                            android:checked="true"
+                            android:title="@string/priority_medium" />
+                        <item
+                            android:id="@+id/priority_low"
+                            android:checked="true"
+                            android:title="@string/priority_low" />
+                    </group>
+                </menu>
+            </item>
+        </menu>
+    </item>
+</menu>

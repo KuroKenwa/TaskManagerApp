@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph">
+
+    <fragment
+        android:id="@+id/taskListFragment"
+        class="com.example.taskmanager.ui.tasklist.TaskListFragment"
+        android:label="TaskListFragment">
+        <action
+            android:id="@+id/action_taskListFragment_to_taskDetailsFragment"
+            app:destination="@id/taskDetailsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/taskDetailsFragment"
+        class="com.example.taskmanager.ui.details.TaskDetailsFragment"
+        android:label="TaskDetailsFragment">
+        <argument
+            android:name="taskId"
+            app:argType="integer"
+            android:defaultValue="-1" />
+    </fragment>
+
+</navigation>
